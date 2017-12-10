@@ -1,5 +1,5 @@
 # A neural network classifier in python using scikit-neuralnetwork
-# Assumes two input variables and three output classes
+# Number of variables read from params.txt input file
 
 params = {}
 with open("params.txt") as f:

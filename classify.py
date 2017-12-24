@@ -11,7 +11,7 @@ from numpy import genfromtxt
 data = genfromtxt('train.csv', delimiter=',')
 
 from sknn.mlp import Classifier, Layer
-nn = Classifier(layers=[Layer("Tanh",units=5),Layer("Sigmoid",units=5),Layer("Softmax")],learning_rate = 0.01, n_iter=500)
+nn = Classifier(layers=[Layer("Tanh",units=5),Layer("Sigmoid",units=5),Layer("Softmax")],learning_rate = 0.01, n_iter=500, verbose=True)
 nn.fit(data[:,params['n_truth']:], data[:,0:params['n_truth']])
 
 data_test = genfromtxt('test.csv', delimiter=',')
